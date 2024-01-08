@@ -1,17 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css"; // Global styles
+import App from "./App"; // Import the main App component
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+// Optionally wrap App in React.StrictMode for additional checks in development
+ReactDOM.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>
+  </React.StrictMode>,
+  document.getElementById("root"), // Renders the App in the 'root' div element
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// Service worker setup (if used)
+// if (process.env.NODE_ENV === 'production' && 'serviceWorker' in navigator) {
+//   navigator.serviceWorker.register('/service-worker.js');
+// }
