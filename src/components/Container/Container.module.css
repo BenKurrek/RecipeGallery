@@ -1,0 +1,16 @@
+/* Reset default margins and padding */
+/* This is the flex container */
+.container {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  /* Full height of the viewport */
+}
+
+/* Responsive adjustments as needed */
+@media (max-width: 768px) {
+  /* Adjust the sidebar and gallery layout for mobile devices */
+  .container {
+    flex-direction: column;
+  }
+}

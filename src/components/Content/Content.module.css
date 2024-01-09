@@ -1,0 +1,17 @@
+/* This is the main content area */
+.content {
+  flex-grow: 1;
+  /* takes up the rest of the space */
+  display: flex;
+  flex-direction: column;
+  margin-left: 250px;
+  /* Equal to the width of the sidebar */
+}
+
+/* Responsive adjustments as needed */
+@media (max-width: 768px) {
+  .content {
+    order: 1;
+    /* Ensure the content comes first on mobile */
+  }
+}

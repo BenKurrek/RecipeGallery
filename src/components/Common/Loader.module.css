@@ -1,0 +1,36 @@
+/* Loader styles */
+.loader {
+  border: 5px solid #f3f3f3;
+  /* Lighter grey for a softer look */
+  border-top: 5px solid #3498db;
+  /* A touch of color */
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+}
+
+/* Loader hidden by default, shown when loading */
+.hidden {
+  display: none;
+}
+
+/* Showing the loader when active */
+#loader:not(.hidden) {
+  display: block;
+  /* Center the loader */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

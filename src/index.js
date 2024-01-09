@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css"; // Global styles
+import "./styles/main.css"; // Global styles
 import App from "./App"; // Import the main App component
 
 // Optionally wrap App in React.StrictMode for additional checks in development

@@ -1,0 +1,96 @@
+.topbar {
+  width: 100%;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#topBar {
+  display: flex;
+  justify-content: space-between;
+}
+
+#cartIcon {
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  margin-left: auto;
+  /* Push the cart icon to the right */
+}
+
+#searchAndSort {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  /* Margin between rows */
+}
+
+/* Search input styling */
+#searchInput {
+  flex: 1;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f8f9fa;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+/* Style for sorting select box */
+#sorting {
+  display: flex;
+  align-items: center;
+  /* Align dropdowns vertically */
+}
+
+/* Last dropdown doesn't need margin on the right */
+#sorting select:last-child {
+  margin-right: 0;
+}
+
+/* Sorting dropdowns styling */
+#sorting select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f8f9fa;
+  /* Light background color */
+  cursor: pointer;
+  margin-right: 10px;
+  /* Spacing between dropdowns */
+}
+
+#sortBy {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#sortByRating,
+#sortByDate,
+#sortByCookTime {
+  margin-left: 15px;
+  /* Adjust this value as needed for your layout */
+}
+
+/* Floating cart icon */
+#cartIcon {
+  margin-left: auto;
+  /* Push it to the right */
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #0056b3;
+  color: white;
+  z-index: 1000;
+}

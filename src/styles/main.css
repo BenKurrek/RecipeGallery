@@ -1,0 +1,94 @@
+/* Resets and body styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* Style for the 'Apply Filters' button */
+button {
+  background-color: #0056b3;
+  color: white;
+  cursor: pointer;
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  /* Larger font size for readability */
+  /* Add top margin */
+}
+
+button:hover {
+  background-color: #003d82;
+}
+
+/* Custom styles for Select2 - ensuring they fit with the gallery theme */
+.select2-container--default .select2-selection--multiple {
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  cursor: pointer;
+  min-height: 40px;
+  background-color: #fff;
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  /* Slightly smaller font for a more refined look */
+}
+
+.select2-container--default
+  .select2-selection--multiple
+  .select2-selection__choice {
+  color: #333;
+  /* Darker color for contrast */
+  background-color: #f2f2f2;
+  /* Lighter background for the choices */
+  border: none;
+  /* Removing border for a flatter design */
+  border-radius: 4px;
+  /* Rounded corners for the choices */
+  padding: 0 10px;
+  margin: 5px 2px;
+}
+
+.select2-container--default
+  .select2-selection--multiple
+  .select2-selection__choice__remove {
+  color: #999;
+  /* Lighter color for the remove button */
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.select2-container .select2-dropdown {
+  border-color: #ddd;
+  /* Lighter border color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow for depth */
+}
+
+.select2-container .select2-search--dropdown .select2-search__field {
+  border: 1px solid #ddd;
+  /* Consistent with dropdown border */
+  border-radius: 4px;
+}
+
+.select2-dropdown {
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.select2-results__option--highlighted[aria-selected] {
+  background-color: #e9ecef;
+  /* Light grey for highlighted state */
+  color: #333;
+}
+
+.select2-search--dropdown .select2-search__field {
+  border: 1px solid #ddd;
+  padding: 4px;
+}
