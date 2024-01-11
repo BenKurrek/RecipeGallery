@@ -1,0 +1,53 @@
+{
+  "Choose Mains:": [
+    "Meatballs",
+    "Meatloaf"
+  ],
+  "Choose Sides:": [
+    "Mashed Potatoes",
+    "Green Beans",
+    "Rice",
+    "Carrots"
+  ],
+  "Choose Ingredients:": [
+    "Lean Ground Beef - 170 - g - Meat",
+    "Potatoes - 300 - g - Fresh Produce",
+    "Grean Beans - 133 - g - Fresh Produce",
+    "Butternut Squash - 66 - g - Fresh Produce",
+    "Garlic Cloves - 2 - na - Fresh Produce",
+    "Panko - 13 - g - International",
+    "Tzatziki - 20 - g - Refrigerated",
+    "Nantes Carrots - 200 - g - Fresh Produce",
+    "Zucchini - 1 - na - Fresh Produce",
+    "Panko - 20 - g - International",
+    "White Rice - 106 - g - Rice & Beans",
+    "Tomato Sauce - 133 - mL - Pasta",
+    "Grana Padano - 9 - g - Cheese"
+  ],
+  "Choose Meats:": [
+    "Beef",
+    "Meatloaf"
+  ],
+  "Choose Vegetables:": [
+    "Green Beans",
+    "Carrots"
+  ],
+  "Max Pots:": [
+    1,
+    2,
+    3
+  ],
+  "Max Pans:": [
+    1,
+    2,
+    3
+  ],
+  "Max Baking Sheets:": [
+    1,
+    2,
+    3
+  ],
+  "Special Requirements:": [
+    "Rice Cooker"
+  ]
+}

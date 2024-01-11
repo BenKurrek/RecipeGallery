@@ -1,14 +1,15 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client"; // Updated import for React 18
 import "./styles/main.css"; // Global styles
 import App from "./App"; // Import the main App component
 
-// Optionally wrap App in React.StrictMode for additional checks in development
-ReactDOM.render(
+const rootElement = document.getElementById("root"); // Get the root element
+const root = ReactDOM.createRoot(rootElement); // Create a root using createRoot
+
+root.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-  document.getElementById("root"), // Renders the App in the 'root' div element
 );
 
 // Service worker setup (if used)

@@ -5,12 +5,24 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-#topBar {
+.topbarContainer {
   display: flex;
   justify-content: space-between;
 }
 
-#cartIcon {
+.applyFilters {
+  /* Add space from the search and sort elements */
+  background-color: #28a745;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  z-index: 1000;
+}
+
+.cartIcon {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
@@ -24,7 +36,7 @@
   /* Push the cart icon to the right */
 }
 
-#searchAndSort {
+.searchAndSort {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -33,7 +45,7 @@
 }
 
 /* Search input styling */
-#searchInput {
+.searchInput {
   flex: 1;
   font-size: 16px;
   border: 1px solid #ddd;
@@ -44,19 +56,19 @@
 }
 
 /* Style for sorting select box */
-#sorting {
+.sorting {
   display: flex;
   align-items: center;
   /* Align dropdowns vertically */
 }
 
 /* Last dropdown doesn't need margin on the right */
-#sorting select:last-child {
+.sorting select:last-child {
   margin-right: 0;
 }
 
 /* Sorting dropdowns styling */
-#sorting select {
+.sorting select {
   padding: 10px;
   font-size: 16px;
   border: 1px solid #ddd;
@@ -68,23 +80,15 @@
   /* Spacing between dropdowns */
 }
 
-#sortBy {
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-#sortByRating,
-#sortByDate,
-#sortByCookTime {
+.sort-by-rating,
+.sort-by-date,
+.sort-by-cooktime {
   margin-left: 15px;
   /* Adjust this value as needed for your layout */
 }
 
 /* Floating cart icon */
-#cartIcon {
+.cartIcon {
   margin-left: auto;
   /* Push it to the right */
   padding: 0.75rem 1.5rem;
