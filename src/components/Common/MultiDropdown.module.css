@@ -1,0 +1,78 @@
+/* Dropdown.module.css */
+.dropdownContainer {
+  position: relative;
+  width: 100%;
+}
+
+.dropdownHeader {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dropdownListContainer {
+  position: absolute;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  background-color: #ffffff;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  margin-top: 5px;
+  display: none;
+}
+
+.dropdownListContainer.show {
+  display: block;
+}
+
+.dropdownOption {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+}
+
+.dropdownOption:hover,
+.dropdownOption.selected {
+  background-color: #e9ecef;
+}
+
+/* Selected Tags */
+.selectedTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 8px; /* Reduced padding for a tighter fit */
+  background-color: #e9ecef;
+  border-radius: 15px; /* Keeps the pill shape with smaller content */
+  font-size: 12px; /* Smaller font size for smaller pills */
+  color: #495057;
+  margin-right: 5px; /* Adds space between tags */
+  cursor: default;
+  line-height: 1; /* Adjust line height to match font size */
+}
+
+.tag button {
+  background-color: transparent;
+  border: none;
+  margin-left: 5px;
+  padding: 0px;
+  cursor: pointer;
+  color: #dc3545;
+  font-size: 12px; /* Match the font size of the tag text */
+}
+
+/* Add any additional styles you want to carry over from the existing CSS */

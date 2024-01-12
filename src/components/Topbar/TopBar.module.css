@@ -22,6 +22,11 @@
   z-index: 1000;
 }
 
+.applyFilters:hover {
+  background-color: #2b783d;
+  /* Darker green on hover */
+}
+
 .cartIcon {
   justify-content: space-between;
   align-items: center;
@@ -80,9 +85,9 @@
   /* Spacing between dropdowns */
 }
 
-.sort-by-rating,
-.sort-by-date,
-.sort-by-cooktime {
+.sortByRating,
+.sortByDate,
+.sortByCooktime {
   margin-left: 15px;
   /* Adjust this value as needed for your layout */
 }

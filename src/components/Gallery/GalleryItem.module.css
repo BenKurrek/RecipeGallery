@@ -1,33 +1,13 @@
-.card {
-  background-color: white;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  overflow: hidden;
-  width: 250px;
-  /* Adjust width as needed */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  margin-bottom: 20px;
-}
-
-.card-image {
-  width: 100%;
-  display: block;
-  height: auto;
-}
-
-.card-content {
-  padding: 16px;
-  text-align: center;
-}
-
-.card-title {
-  margin: 0.5em 0;
-  font-size: 1em;
-  font-weight: bold;
+.galleryCooktime,
+.galleryRating,
+.galleryDateAdded {
+  font-size: 0.8rem;
   color: #333;
+  margin-bottom: 2px;
+  font-weight: 500;
 }
 
-.card-controls {
+.cardControls {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,7 +17,7 @@
   border-top: 1px solid #ddd;
 }
 
-.control-button {
+.controlButton {
   background-color: #e9ecef;
   /* Light grey background for buttons */
   color: #333;
@@ -63,12 +43,28 @@
   /* Smooth transition for hover effect */
 }
 
-.control-button:hover {
+.controlButton:hover {
   background-color: #d0d3d4;
   /* Slightly darker shade on hover */
 }
 
-.quantity-input {
+.galleryItem {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  transition:
+    transform 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.galleryItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.quantityInput {
   width: 60px;
   text-align: center;
   padding: 8px;
@@ -78,7 +74,7 @@
   line-height: 1.5;
 }
 
-.quantity-input {
+.quantityInput {
   max-width: 60px;
   /* Limit width of the input field */
   text-align: center;
@@ -87,8 +83,34 @@
 }
 
 /* Removes spinners from input type number in Chrome, Safari, Edge */
-.quantity-input::-webkit-inner-spin-button,
-.quantity-input::-webkit-outer-spin-button {
+.quantityInput::-webkit-inner-spin-button,
+.quantityInput::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+.galleryTitle {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.gallerySubtitle {
+  font-size: 1.2rem;
+  color: #666;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.galleryImage {
+  width: 100%;
+  display: block;
+  height: auto;
+  border-bottom: 1px solid #ddd;
+}
+
+.galleryInfo {
+  padding: 1rem;
+  text-align: left;
 }
