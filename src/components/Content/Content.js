@@ -5,7 +5,7 @@ import styles from "./Content.module.css";
 import { filterRecipes } from "../../utils/helpers";
 import { RecipeContext } from "../../context/RecipeContext";
 
-const Content = ({ cart, setCart, filters, setFilters }) => {
+const Content = ({ setIsModalOpen, cart, setCart, filters, setFilters }) => {
   const recipeData = useContext(RecipeContext);
   const [filteredRecipes, setFilteredRecipes] = useState([]);
 
@@ -27,6 +27,7 @@ const Content = ({ cart, setCart, filters, setFilters }) => {
   return (
     <div className={styles.content}>
       <TopBar
+        setIsModalOpen={setIsModalOpen}
         filters={filters}
         setFilters={setFilters}
         onApplyFilters={onApplyFilters}

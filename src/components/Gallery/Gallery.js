@@ -2,10 +2,6 @@ import React, { useContext } from "react";
 import styles from "./Gallery.module.css";
 import GalleryItem from "./GalleryItem";
 
-const applyFilters = (recipes, filters) => {
-  return recipes;
-};
-
 const Gallery = ({ setCart, filteredRecipes }) => {
   console.log("Filtered recipes:", filteredRecipes);
   return (

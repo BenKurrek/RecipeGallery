@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import styles from "./GalleryItem.module.css";
 
 const dateAddedToReadable = (dateAdded) => {
-  return "Date";
+  let date = new Date(dateAdded);
+  return date.toString().split("GMT")[0];
 };
 
 const GalleryItem = ({ setCart, recipe }) => {

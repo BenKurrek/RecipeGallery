@@ -3,13 +3,18 @@ import Sidebar from "../Sidebar/Sidebar";
 import Content from "../Content/Content";
 import styles from "./Container.module.css";
 
-const Container = () => {
-  const [currentFilters, setCurrentFilters] = useState({});
-  const [cart, setCart] = useState({});
+const Container = ({
+  setIsModalOpen,
+  cart,
+  setCart,
+  currentFilters,
+  setCurrentFilters,
+}) => {
   return (
     <div className={styles.container}>
       <Sidebar filters={currentFilters} setFilters={setCurrentFilters} />
       <Content
+        setIsModalOpen={setIsModalOpen}
         cart={cart}
         setCart={setCart}
         filters={currentFilters}

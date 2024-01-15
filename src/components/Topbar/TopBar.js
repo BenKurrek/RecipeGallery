@@ -6,7 +6,13 @@ function todo() {
   console.log("TODO");
 }
 
-const TopBar = ({ filters, setFilters, onApplyFilters, cart }) => {
+const TopBar = ({
+  setIsModalOpen,
+  filters,
+  setFilters,
+  onApplyFilters,
+  cart,
+}) => {
   const [selectedText, setSelectedText] = useState("");
   const [selectedOptions, setSelectedOptions] = useState({
     sortByCookTime: "N",
@@ -91,7 +97,11 @@ const TopBar = ({ filters, setFilters, onApplyFilters, cart }) => {
             </select>
           </div>
         </div>
-        <div id="cartIcon" className={styles.cartIcon} onClick={todo}>
+        <div
+          id="cartIcon"
+          className={styles.cartIcon}
+          onClick={() => setIsModalOpen((prev) => !prev)}
+        >
           🛒 Cart (
           <span id="cartCount">
             {Object.values(cart || {}).reduce((sum, item) => {

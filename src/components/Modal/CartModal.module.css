@@ -12,7 +12,6 @@
   /* Full width */
   height: 100%;
   /* Full height */
-  overflow: auto;
   /* Enable scroll if needed */
   background-color: rgb(0, 0, 0);
   /* Fallback color */
@@ -20,8 +19,32 @@
   /* Black w/ opacity */
 }
 
+/* New CSS class for displaying the modal */
+.modalShow {
+  display: block; /* Show the modal */
+}
+
+/* Title Styling */
+.modalContent h2 {
+  font-family: "Arial", sans-serif; /* Consider a more unique font if available */
+  color: #333; /* Dark grey for a professional look */
+  font-size: 24px; /* Adjust size as needed */
+  font-weight: bold; /* Bold for emphasis */
+  margin-bottom: 20px; /* Add space below the title */
+  padding-bottom: 10px; /* Padding for visual space */
+  border-bottom: 2px solid #eaeaea; /* A subtle line below the title */
+}
+
+.cartItems {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  max-height: 65vh; /* Limit the height of the cart */
+  overflow-y: auto;
+}
+
 /* Style the cart items */
-.cart-item {
+.cartItem {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -30,16 +53,19 @@
   padding-bottom: 1rem;
 }
 
+.recipeDescription {
+  display: flex;
+}
+
 /* Modal Content */
-.modal-content {
+.modalContent {
   background-color: #ffffff;
   margin: 5% auto; /* Adjust to reduce the top margin */
   padding: 2rem;
   border: none;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 10px; /* Rounded corners */
-  width: 40%; /* Adjust width to match design */
-  max-width: 500px; /* Ensure it doesn't get too wide on large screens */
+  max-width: 90%; /* Ensure it doesn't get too wide on large screens */
 }
 
 /* The Close Button */
@@ -58,8 +84,7 @@
 }
 
 /* Style the confirm button */
-/* Check if needed */
-.confirm-btn {
+.confirmBtn {
   background-color: #007bff; /* Example blue color */
   color: white;
   border: none;
@@ -69,38 +94,157 @@
   cursor: pointer;
 }
 
-/* Style the confirm button */
-.confirm-btn {
-  background-color: #007bff; /* Example blue color */
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  margin-top: 20px; /* Add some margin to the top */
-  cursor: pointer;
-}
-
-/* Style the individual product details */
-.product-details {
+/* Style the individual recipe details */
+.recipeDetails {
+  width: 100%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
-.product-image {
-  width: 50px; /* Example size, adjust as needed */
-  height: auto;
+.recipeImage {
+  border-radius: 5px;
+  height: 150px; /* Example size, adjust as needed */
+  width: auto;
   margin-right: 1rem;
 }
 
-.product-info {
+.recipeInfo {
   display: flex;
   flex-direction: column;
+  margin-right: 1rem;
 }
 
-.product-name {
+.recipeName {
+  font-size: 1.3rem;
   font-weight: bold;
+  color: #333;
 }
 
-.product-price {
+.recipeSubtitle {
+  font-size: 1.2rem;
+  color: #666;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.recipeCooktime {
   color: #555;
+  transition: background-color 0.3s;
+  /* Smooth transition for hover effect */
+}
+
+.recipeSubDetails {
+  color: #555;
+  font-style: italic;
+  font-weight: lighter;
+  font-size: 0.8rem;
+  transition: background-color 0.3s;
+  /* Smooth transition for hover effect */
+}
+
+.controlButton:hover {
+  background-color: #d0d3d4;
+  /* Slightly darker shade on hover */
+}
+
+.cardControls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 15px;
+}
+
+.controlButton {
+  background-color: #e9ecef;
+  /* Light grey background for buttons */
+  color: #333;
+  /* Darker text for contrast */
+  cursor: pointer;
+  width: 40px;
+  /* Fixed width for - and + buttons */
+  height: 40px;
+  /* Fixed height for - and + buttons */
+  line-height: 40px;
+  /* Center the text vertically */
+  text-align: center;
+  border: 1px solid #ddd;
+  /* Border to match the design */
+  border-radius: 5px;
+  /* Rounded corners */
+  font-size: 1rem;
+  /* Larger font size for readability */
+  margin: 0 5px;
+  /* Margin for spacing around buttons */
+  padding: 0;
+}
+
+.quantityInput {
+  width: 60px;
+  text-align: center;
+  padding: 8px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.quantityInput {
+  max-width: 60px;
+  /* Limit width of the input field */
+  text-align: center;
+  -moz-appearance: textfield;
+  /* Removes spinners from input type number in Firefox */
+}
+
+/* Removes spinners from input type number in Chrome, Safari, Edge */
+.quantityInput::-webkit-inner-spin-button,
+.quantityInput::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.viewIngredientsBtn {
+  background-color: #f0f0f0; /* A light grey background */
+  color: #333; /* Dark text for contrast */
+  border: 1px solid #ddd; /* A subtle border */
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-left: 10px; /* Space it a bit from the quantity or other elements */
+  border-radius: 4px; /* Rounded edges for a modern look */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* A soft shadow for depth */
+  transition: background-color 0.3s ease; /* A transition for hover effect */
+}
+
+.viewIngredientsBtn:hover {
+  background-color: #e0e0e0; /* Slightly darker on hover for feedback */
+}
+
+.ingredientsList {
+  background-color: #fff; /* A clean background */
+  border-left: 1px solid #ddd; /* Separates ingredients from the rest of the cart item */
+  padding: 10px;
+  max-height: 200px; /* Limit the height of the list */
+  overflow-y: auto;
+  border-radius: 0 0 8px 8px; /* Rounded corners at the bottom */
+}
+
+/* When ingredient list is toggled to show, update display */
+.ingredientsList.show {
+  display: block;
+}
+
+/* Individual ingredient styling */
+.ingredient {
+  padding: 5px 0; /* Spacing for each ingredient */
+  border-bottom: 1px solid #f0f0f0; /* A light separator line */
+  color: #555; /* Darker text for readability */
+  font-size: 14px;
+}
+
+/* Last ingredient doesn't need a bottom border */
+.ingredient:last-child {
+  border-bottom: none;
 }
